@@ -6,4 +6,8 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Content Remove="wwwroot\js\XOCHY_KYSCHATI_OTPYSTITE_PZ.cs" />
+  </ItemGroup>
+
 </Project>

@@ -9,8 +9,8 @@
     <link rel="stylesheet" href="~/project_site.styles.css" asp-append-version="true" />
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+    <header class="navbar">
+        @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">project_site</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -25,10 +25,73 @@
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Register" asp-action="Logreg">Log in</a>
+                        </li>
                     </ul>
                 </div>
             </div>
+        </nav> *@
+        <nav class="logotipo TRARARARARAR">
+            <div class="logo" style="display: flex;align-items: center;">
+                <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">KVASDAR</span>
+                <button id="changeCurrencyBtn">KZT</button>
+                <button id="changeLanguageBtn">RUS</button>
+
+                <div id="currencyPopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" id="currencyCloseBtn">&times;</span>
+                        <button>KZT</button>
+                        <button>USD</button>
+                        <button>RUB</button>
+                        <button>EUR</button>
+                    </div>
+                </div>
+
+                <div id="languagePopup" class="popup">
+                    <div class="popup-content">
+                        <span class="close" id="languageCloseBtn">&times;</span>
+                        <button>KZ</button>
+                        <button>RUS</button>
+                        <button>ENG</button>
+                    </div>
+                </div>
+
+                <div>
+                    <span>
+                        <button id="playVideoBtn">PACXALOCHKA</button>
+                        <div class=" enot">
+                        <video id="myVideo" controls>
+                            <source src="~/baby-raccoon-raccoon.mp4" type="video/mp4">
+                            Ваш браузер не поддерживает видео.
+                        </video>
+                        </div>
+                    </span>
+                </div>
+
+                
+                <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;"  class=" logreg">
+                    <button class="login"><a asp-area="" asp-controller="Register" asp-action="Logreg">Log</a></button>
+                    <button class="register"><a asp-area="" asp-controller="Register" asp-action="SignUp">Sign</a></button>
+                </span>
+            </div>
         </nav>
+        <nav>
+            <div class="hamburger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a  asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
+                <li><a  asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
+                <li><a href="https://www.web-leb.com/code">Products</a></li>
+                <li><a href="https://www.web-leb.com/code">Services</a></li>
+                <li><a href="https://www.web-leb.com/code">Contact Us</a></li>
+            </ul>
+        </nav>
+        <script src ="~/js/XOCHY_KYSCHATI_OTPYSTITE_PZ.cs.js"></script>
+        <script src="/js/site.js"></script>
     </header>
     <div class="container">
         <main role="main" class="pb-3">
