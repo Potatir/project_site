@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using project_site.Models;
 using System.Diagnostics;
 
+
 namespace project_site.Controllers
 {
     public class HomeController : Controller
@@ -12,9 +13,12 @@ namespace project_site.Controllers
         {
             _logger = logger;
         }
+            
 
         public IActionResult Index()
         {
+            string aboba = "aboba";
+            ViewBag.SANKTPETERBERG = aboba;
             return View();
         }
 
