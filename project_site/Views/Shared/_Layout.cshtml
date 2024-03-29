@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/project_site.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/theme.css" asp-append-version="true"/>
 </head>
 <body>
     <header class="navbar">
@@ -35,8 +36,8 @@
         <nav class="logotipo TRARARARARAR">
             <div class="logo" style="display: flex;align-items: center;">
                 <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">KVASDAR</span>
-                <button id="changeCurrencyBtn">KZT</button>
-                <button id="changeLanguageBtn">RUS</button>
+                <button class ="button1" id="changeCurrencyBtn">KZT</button>
+                <button class= "button2" id="changeLanguageBtn">RUS</button>
 
                 <div id="currencyPopup" class="popup">
                     <div class="popup-content">
@@ -59,7 +60,7 @@
 
                 <div>
                     <span>
-                        <button id="playVideoBtn">PACXALOCHKA</button>
+                        <button class="button3" id="playVideoBtn">PACXALOCHKA</button>
                         <div class=" enot">
                         <video id="myVideo" controls>
                             <source src="~/baby-raccoon-raccoon.mp4" type="video/mp4">
@@ -71,9 +72,32 @@
 
                 
                 <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;"  class=" logreg">
-                    <button class="login"><a asp-area="" asp-controller="Register" asp-action="Logreg">Log</a></button>
-                    <button class="register"><a asp-area="" asp-controller="Register" asp-action="SignUp">Sign</a></button>
+                    <a class="login1" asp-area="" asp-controller="Register" asp-action="Logreg">Login</a>
+                    <a class="register1" asp-area="" asp-controller="Register" asp-action="SignUp">Sign</a>
+
                 </span>
+
+                
+                <div class="switch" >
+                    <input type="checkbox" name="toggle">
+                    <label for="toggle">
+                        <i class="bulb">
+                            <span class="bulb-center"></span>
+                            <span class="filament-1"></span>
+                            <span class="filament-2"></span>
+                            <span class="reflections">
+                                <span></span>
+                            </span>
+                            <span class="sparks">
+                                <i class="spark1"></i>
+                                <i class="spark2"></i>
+                                <i class="spark3"></i>
+                                <i class="spark4"></i>
+
+                            </span>
+                        </i>
+                    </label>
+                </div>
             </div>
         </nav>
         <nav>
@@ -84,10 +108,9 @@
             </div>
             <ul class="nav-links">
                 <li><a  asp-area="" asp-controller="Home" asp-action="Index">Home</a></li>
-                <li><a  asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a></li>
-                <li><a href="https://www.web-leb.com/code">Products</a></li>
-                <li><a href="https://www.web-leb.com/code">Services</a></li>
-                <li><a href="https://www.web-leb.com/code">Contact Us</a></li>
+                <li><a asp-area="" asp-controller="Content" asp-action="MainPage">Products</a></li>
+                <li><a asp-area="" asp-controller="Profile" asp-action="Index" >Profile</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
         <script src ="~/js/XOCHY_KYSCHATI_OTPYSTITE_PZ.cs.js"></script>
@@ -99,11 +122,6 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - project_site - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
