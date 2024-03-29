@@ -5,12 +5,85 @@
     letter-spacing: 1px;
     font-weight: 300;
 }
+.city {
+    display: inline-block;
+    width: 250px;
+    height:55px;
+    font-size: 16px;
+    border-radius:50px;
+    border:3px solid #ffd800;
+    padding: 5px;
+    align-content:center;
+}
+.Goroda {
+    width: 150px;
+    height: 100px;
+    background-color: aliceblue;
+    color: #aaa;
+}
+.menyshka {
+
+    margin-top:50px;
+
+}
+
+.search{
+    margin-top:-3.3%;
+    margin-left:59%;
+    width:100px;
+    height:25px;
+    border:2px solid #ffd800
+}
+
+.menishe {
+    width: 15px;
+    height: 15px;
+    background-color: aliceblue;
+    color: #aaa;
+    margin-top:50px;
+}
+#menu {
+    position: absolute;
+    top:40%;
+    left: 45%;
+    border:3px solid #131418
+}
+
+.bolshe {
+    width: 15px;
+    height: 15px;
+    background-color: aliceblue;
+    color: #aaa;
+    margin-top: 50px;
+}
+
+    .city div {
+        display: flex;
+        align-items: center;
+    }
+
+        .city div span {
+            width: 20px;
+            padding: 5px;
+            background-color: #ccc;
+            border-radius:50%;
+            
+        }
+
+        .city div input {
+            flex: 1;
+            padding: 5px;
+            font-size: inherit;
+            border: none;
+            outline: none;
+        }
+
 
 body {
     overflow-x: hidden;
 }
 .login-button {
-    color:#019;
+    color:#019;s
 }
 .register-button {
     color:darkblue;
@@ -65,7 +138,7 @@ body {
     margin-left: 50px;
 }
 
-button {
+.button {
 
     color: white;
     width: 115px;

@@ -3,29 +3,153 @@
 @{
 }
 
-<div>
+<div class ="city">
     <div>
         <span>
-
+            SVG
         </span>
-        <input> </input>
+                <input type="text" id="cityInput" onclick="toggleCitiesTable()">
+                <div id="citiesTable" style="display: none;">
+                    <table class=" Goroda">
+                        <tr>
+                            <td onclick="selectCity('Астана')">Астана</td>
+                        </tr>
+                        <tr>
+                            <td onclick="selectCity('Алматы')">Алматы</td>
+                        </tr>
+                    </table>
+                </div>
+
+                <script>
+                    function toggleCitiesTable() {
+                        var table = document.getElementById("citiesTable");
+                        if (table.style.display === "none" || table.style.display === "") {
+                            table.style.display = "block";
+                        } else {
+                            table.style.display = "none";
+                        }
+                    }
+
+                    function selectCity(city) {
+                        var input = document.getElementById("cityInput");
+                        input.value = city;
+                        toggleCitiesTable(); 
+                    }
+
+                </script>
     </div>
 </div>
 
+        <div class="city">
+            <div>
+                <span>
+                    SVG
+                </span>
+                <input type="date" >
+                <div id="citiesTable" style="display: none;">
+                    <table class=" Goroda">
+                        <tr>
+                            <td onclick="selectCity('Астана')">Астана</td>
+                        </tr>
+                        <tr>
+                            <td onclick="selectCity('Алматы')">Алматы</td>
+                        </tr>
+                    </table>
+                </div>
 
-<div>
-    <div>
-        <div>
-            <span>
-
-            </span>
-                <button>
-
-                </button>
-
-                <button>
-
-                </button>
+                
+            </div>
         </div>
-    </div>
+@* <button class="menishe" id="decrement">-</button>
+<span id="counter">0</span>
+<button class="bolshe" id="increment">+</button> *@
+
+<div class="city">
+    <div>
+        <span>
+            SVG
+        </span>
+<button id="open-menu">Меню</button>
+<div class=" menyshka" id="menu" style="display: none;">
+    <h3>Adult</h3>
+            <button class="menishe1 decrement">-</button>
+    <span class="adult-counter">0</span>
+            <button class="bolshe1 increment">+</button>
+    <h3>Child</h3>
+            <button class="menishe1 decrement">-</button>
+    <span class="child-counter">0</span>
+            <button class="bolshe1 increment">+</button>
+    <h3>Numbers</h3>
+            <button class="menishe1 decrement">-</button>
+    <span class="number-counter">0</span>
+            <button class="bolshe1 increment">+</button>
+    <script>
+        // Получаем ссылки на элементы кнопки и меню
+        const openMenuBtn = document.getElementById('open-menu');
+        const menu = document.getElementById('menu');
+
+        // Назначаем обработчик события для кнопки открытия меню
+        openMenuBtn.addEventListener('click', function () {
+            // Показываем меню
+            menu.style.display = 'block';
+        });
+
+        // Получаем ссылки на все счетчики в меню
+        const adultCounter = document.querySelector('.adult-counter');
+        const childCounter = document.querySelector('.child-counter');
+        const numberCounter = document.querySelector('.number-counter');
+
+        // Функция для уменьшения значения счетчика
+        function decrementCounter(counter) {
+            let value = parseInt(counter.textContent);
+            value--;
+            if (value < 0) {
+                value = 0;
+            }
+            counter.textContent = value;
+        }
+
+        // Функция для увеличения значения счетчика
+        function incrementCounter(counter) {
+            let value = parseInt(counter.textContent);
+            value++;
+            counter.textContent = value;
+        }
+
+        // Назначаем обработчики событий для кнопок в меню
+        const decrementButtons = document.querySelectorAll('.decrement');
+        const incrementButtons = document.querySelectorAll('.increment');
+
+        decrementButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const counter = this.nextElementSibling;
+                decrementCounter(counter);
+            });
+        });
+
+        incrementButtons.forEach(button => {
+            button.addEventListener('click', function () {
+                const counter = this.previousElementSibling;
+                incrementCounter(counter);
+            });
+        });
+
+    </script>
 </div>
+    </div>
+
+</div>
+
+
+
+<div class="search">
+    
+        <button>Найти</button>
+    
+</div>
+
+
+
+
+
+
