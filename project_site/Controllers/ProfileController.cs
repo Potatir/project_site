@@ -4,7 +4,7 @@ namespace project_site.Controllers
 {
     public class ProfileController : Controller
     {
-        public IActionResult Index()
+        public IActionResult User()
         {
             return View();
         }
