@@ -2,15 +2,17 @@
 @model project_site.Views.Content.MainPageModel
 @{
 }
+<link rel="stylesheet" href="~/css/contact.css" asp-append-version="true" />
+<script src="~/js/site.js"></script>
 
-<div class ="city">
+<div class ="city" >
     <div>
         <span>
-            SVG
+            <img style="width:50px; height:30px; margin-left:-6px;" src="/bed-3-svgrepo-com.svg" />
         </span>
-                <input type="text" id="cityInput" onclick="toggleCitiesTable()">
+        <input style="width: 150px;" type="text" id="cityInput" onclick="toggleCitiesTable()">
                 <div id="citiesTable" style="display: none;">
-                    <table class=" Goroda">
+                    <table class=" Goroda" style="z-index:3;">
                         <tr>
                             <td onclick="selectCity('Астана')">Астана</td>
                         </tr>
@@ -43,7 +45,7 @@
         <div class="city">
             <div>
                 <span>
-                    SVG
+            <img style="width:50px; height:30px; margin-left:-6px;" src="/calendar-days-svgrepo-com.svg" />
                 </span>
                 <input type="date" >
                 <div id="citiesTable" style="display: none;">
@@ -67,39 +69,62 @@
 <div class="city">
     <div>
         <span>
-            SVG
+            <img style="width:50px; height:30px; margin-left:-6px;" src="/people-svgrepo-com.svg" />
         </span>
-<button id="open-menu">Меню</button>
+        <button style="width: 187px;height: 45px;text-align: left;background-color: white;border: none;" id="open-menu">
+            Меню
+        </button>
 <div class=" menyshka" id="menu" style="display: none;">
-    <h3>Adult</h3>
-            <button class="menishe1 decrement">-</button>
+    
+                <button style="border:none;" class = "close" id="closeMenu">
+            x
+        </button>
+            <div style="margin-top: 15px;border: 3px solid white;margin-bottom: 3px;margin-left: 30px;">
+                <h3 >
+                    Adult
+                </h3>
+            <div class=" knopka">
+                    <button style="border:none;background-color:white;color:blue;width:25px;height:25px;" class="menishe1 decrement">
+                        -
+                    </button>
     <span class="adult-counter">0</span>
-            <button class="bolshe1 increment">+</button>
-    <h3>Child</h3>
-            <button class="menishe1 decrement">-</button>
+                    <button style="border:none;background-color:white;color:blue;width:25px;height:25px;" class="bolshe1 increment">+</button>
+        </div>
+            </div>
+            <div style="margin-top: 15px;border: 3px solid white;margin-bottom: 3px;margin-left: 30px;">
+                <h3 >Child</h3>
+                <div class="knopka">
+                    <button style="border:none;background-color:white;color:blue;width:25px;height:25px;" class="menishe1 decrement">-</button>
     <span class="child-counter">0</span>
-            <button class="bolshe1 increment">+</button>
-    <h3>Numbers</h3>
-            <button class="menishe1 decrement">-</button>
+                    <button style="border:none;background-color:white;color:blue;width:25px;height:25px;" class="bolshe1 increment">+</button>
+            </div>
+            </div>
+            <div style="margin-top: 15px;border: 3px solid white;margin-bottom: 3px;margin-left: 30px;">
+                <h3 >Numbers</h3>
+                <div class="knopka" style="margin-left: 9px;">
+                    <button style="border:none;background-color:white;color:blue;width:25px;height:25px;" class="menishe1 decrement">-</button>
     <span class="number-counter">0</span>
-            <button class="bolshe1 increment">+</button>
+                    <button style="border:none;background-color:white;color:blue;width:25px;height:25px;" class="bolshe1 increment">+</button>
+    </div>
+            </div>
+            <button class="submitBox">submit</button>
     <script>
-        // Получаем ссылки на элементы кнопки и меню
         const openMenuBtn = document.getElementById('open-menu');
         const menu = document.getElementById('menu');
+        const closeMenu = document.getElementById('closeMenu')
 
-        // Назначаем обработчик события для кнопки открытия меню
         openMenuBtn.addEventListener('click', function () {
-            // Показываем меню
             menu.style.display = 'block';
         });
 
-        // Получаем ссылки на все счетчики в меню
+        closeMenu.onclick = function (){
+            menu.style.display = 'none';
+        }
+
         const adultCounter = document.querySelector('.adult-counter');
         const childCounter = document.querySelector('.child-counter');
         const numberCounter = document.querySelector('.number-counter');
 
-        // Функция для уменьшения значения счетчика
         function decrementCounter(counter) {
             let value = parseInt(counter.textContent);
             value--;
@@ -109,14 +134,12 @@
             counter.textContent = value;
         }
 
-        // Функция для увеличения значения счетчика
         function incrementCounter(counter) {
             let value = parseInt(counter.textContent);
             value++;
             counter.textContent = value;
         }
 
-        // Назначаем обработчики событий для кнопок в меню
         const decrementButtons = document.querySelectorAll('.decrement');
         const incrementButtons = document.querySelectorAll('.increment');
 
@@ -144,12 +167,8 @@
 
 <div class="search">
     
-        <button>Найти</button>
+        <button style="border:none;">Найти</button>
     
 </div>
-
-
-
-
 
 

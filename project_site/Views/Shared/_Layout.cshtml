@@ -1,4 +1,10 @@
-﻿<!DOCTYPE html>
+﻿@{
+    string lang_kz = "kz";
+    string lang_rus = "rus";
+    string lang_eng = "eng";
+}
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -10,7 +16,7 @@
     <link rel="stylesheet" href="~/css/theme.css" asp-append-version="true"/>
 </head>
 <body>
-    <header class="navbar">
+    <header class="navbar" style="background-color:#242582">
         @* <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">project_site</a>
@@ -34,11 +40,12 @@
             </div>
         </nav> *@
         
-        <nav class="logotipo TRARARARARAR">
-            <div class="logo" style="display: flex;align-items: center;">
-                <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">KVASDAR</span>
+        <nav class="logotipo TRARARARARAR" style="background-color:#242582; margin-top:-10px;">
+            <div class="logo" style="display: flex;align-items: center; background-color:#242582;">
+                <span style="color:white; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;">KVASDAR</span>
                 <button class ="button1" id="changeCurrencyBtn">KZT</button>
-                <button class= "button2" id="changeLanguageBtn">RUS</button>
+                <button class="button2" id="changeLanguageBtn"> <img style="height:50px" src="/flag.svg"/></button>
+                
 
                 <div id="currencyPopup" class="popup">
                     <div class="popup-content">
@@ -53,9 +60,10 @@
                 <div id="languagePopup" class="popup">
                     <div class="popup-content">
                         <span class="close" id="languageCloseBtn">&times;</span>
-                        <button>KZ</button>
-                        <button>RUS</button>
-                        <button>ENG</button>
+                        
+                        <button><a style="color:black; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="IndexKZ"><img style="height:50px" src="/flag_kz.svg.svg" /> @lang_kz</a></button>
+                        <button><a style="color:black; text-decoration:none;" asp-area="" asp-controller="Home" asp-action="Index"><img style="height:50px" src="/flag.svg" /> @lang_rus</a></button>
+                        <button> <a style="color:black; text-decoration:none;"  asp-area="" asp-controller="Home" asp-action="IndexENG"><img style="height:50px" src="/usa-flag-circular-17882.svg" /> @lang_eng</a></button>
                     </div>
                 </div>
 
@@ -72,36 +80,17 @@
                 </div>
 
                 
-                <span style="color:#01939c; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;"  class=" logreg">
+                <span style="color:white; font-size:26px; font-weight:bold; letter-spacing: 1px;margin-left: 20px;" class=" logreg">
                     <a class="login1" asp-area="" asp-controller="Register" asp-action="Logreg">Login</a>
                     <a class="register1" asp-area="" asp-controller="Register" asp-action="SignUp">Sign</a>
 
                 </span>
 
                 
-                <div class="switch" >
-                    <input type="checkbox" name="toggle">
-                    <label for="toggle">
-                        <i class="bulb">
-                            <span class="bulb-center"></span>
-                            <span class="filament-1"></span>
-                            <span class="filament-2"></span>
-                            <span class="reflections">
-                                <span></span>
-                            </span>
-                            <span class="sparks">
-                                <i class="spark1"></i>
-                                <i class="spark2"></i>
-                                <i class="spark3"></i>
-                                <i class="spark4"></i>
-
-                            </span>
-                        </i>
-                    </label>
-                </div>
+               
             </div>
         </nav>
-        <nav>
+        <nav style="background-color:#242582">
             <div class="hamburger">
                 <div class="line1"></div>
                 <div class="line2"></div>

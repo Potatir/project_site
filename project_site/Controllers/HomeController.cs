@@ -22,11 +22,21 @@ namespace project_site.Controllers
             return View();
         }
 
+        public IActionResult IndexKZ()
+        {
+            return View();
+        }
+
+        public IActionResult IndexENG()
+        {
+            return View();
+        }
+
         public IActionResult Privacy()
         {
             return View();
         }
-        public IActionResult SetLanguage(string culture, string returnUrl)
+       /* public IActionResult SetLanguage(string culture, string returnUrl)
         {
             Response.Cookies.Append(
                 CookieRequestCultureProvider.DefaultCookieName,
@@ -41,6 +51,6 @@ namespace project_site.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        }*/
     }
 }

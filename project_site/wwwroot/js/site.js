@@ -40,6 +40,10 @@ languageCloseBtn.onclick = function () {
     languagePopup.style.display = "none";
 }
 
+MenuCloseBtn.onclick = function () {
+    menuPopup.style.display = "none";
+}
+
 const daysTag = document.querySelector(".days"),
     currentDate = document.querySelector(".current-date"),
     prevNextIcon = document.querySelectorAll(".icons span");

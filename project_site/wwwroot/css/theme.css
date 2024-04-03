@@ -1,4 +1,7 @@
-﻿.switch {
+﻿body {
+    background: white;
+}
+    .switch {
     position: relative;
     margin-left:500px;
     margin-top:40px;

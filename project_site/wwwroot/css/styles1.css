@@ -1,6 +1,8 @@
 ﻿@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
-
-* {
+body {
+    background: white;
+}
+    * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -12,7 +14,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #111;
+    background: #553D67;
     width: 100%;
     overflow: hidden;
 }
