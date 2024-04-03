@@ -6,4 +6,13 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Views\Profile\profile.cs" />
+    <Compile Remove="Views\Profile\User.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\js\XOCHY_KYSCHATI_OTPYSTITE_PZ.cs" />
+  </ItemGroup>
+
 </Project>
