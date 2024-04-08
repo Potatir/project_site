@@ -10,3 +10,4 @@ playVideoBtn.onclick = function () {
     myVideo.style.display = "block";
     myVideo.play(); // Начать воспроизведение видео
 }
+
