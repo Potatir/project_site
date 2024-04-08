@@ -16,5 +16,12 @@ namespace project_site.Controllers
             return View();
         }
 
+        public IActionResult Hotels()
+        {
+
+            return View();
+        }
+
     }
 }
+ 
