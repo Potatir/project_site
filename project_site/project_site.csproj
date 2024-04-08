@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Views\Content\MainHotels.cs" />
     <Compile Remove="Views\Profile\profile.cs" />
     <Compile Remove="Views\Profile\User.cs" />
   </ItemGroup>
